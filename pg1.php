@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page</title>
+
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+    <meta name="robots" content="noindex,follow" />
+  </head>
+  <body>
+    <div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        
+       <a href="homepg.php"> <img src="home.png" width="20px" height="20px"></a>
+        Grocers &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <button type="button" onclick="location.href = 'pg.php'" class="btton btton1" name="checkout">Checkout</button>
+        <b>Total Items:<p id="totalitems" text-color="red" style="margin:20;display:inline;float:right"></p></b></div>
+
+      <!-- Product #1 -->
+      <div class="item">
+      
+        <div class="image">
+          <img src="product_images/apples.jpg" alt=""  width="80px" height="80px"/>
+        </div>
+
+        <div class="description">
+          <span>Item 1</span>
+          <span>In stock</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">+</button>
+          <input type="text" name="name" value="1" id="i1">
+          <button class="minus-btn" type="button" name="button">-</button>
+        </div>
+
+        <div class="total-price">50 Rs</div>
+        
+      </div>
+
+      <!-- Product #2 -->
+      <div class="item">
+      
+        <div class="image">
+          <img src="product_images/butter.jpg" alt=""  width="80px" height="80px"/>
+        </div>
+
+        <div class="description">
+          <span>Item 2</span>
+          <span>In stock</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">+</button>
+          <input type="text" name="name" value="1" id="i2">
+          <button class="minus-btn" type="button"  name="button">-</button>
+        </div>
+
+        <div class="total-price">38 Rs</div>
+       
+      </div>
+
+
+      <!-- Product #3 -->
+      <div class="item">
+      
+        <div class="image">
+          <img src="product_images/grapes.jpg" alt=""  width="80px" height="80px"/>
+        </div>
+
+        <div class="description">
+          <span>Item 3</span>
+          <span>In stock</span>
+        </div>
+
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">+</button>
+          <input type="text" name="name" value="1" id="i3">
+          <button class="minus-btn" type="button" name="button">-</button>
+        </div>
+
+        <div class="total-price">150 Rs</div>
+        
+     
+    </div>
+
+    <div class="item">
+      
+      <div class="image">
+        <img src="product_images/beans.jpg" alt=""  width="80px" height="80px"/>
+      </div>
+
+      <div class="description">
+        <span>Item 4</span>
+        <span>In stock</span>
+      </div>
+
+      <div class="quantity">
+        <button class="plus-btn" type="button" name="button">+</button>
+        <input type="text" name="name" value="1" id="i4">
+        <button class="minus-btn" type="button" name="button">-</button>
+      </div>
+
+      <div class="total-price">60 Rs</div>
+    
+    
+  </div>
+  <div class="item">
+      
+    <div class="image">
+      <img src="product_images/oranges.jpg" alt=""  width="80px" height="80px"/>
+    </div>
+
+    <div class="description">
+      <span>Item 5</span>
+      <span>In stock</span>
+    </div>
+
+    <div class="quantity">
+      <button class="plus-btn" type="button" name="button">+</button>
+      <input type="text" name="name" value="1" id="i5">
+      <button class="minus-btn" type="button" name="button">-</button>
+    </div>
+
+    <div class="total-price">120 Rs</div>
+  
+  
+</div>
+<button type="button"  onclick="myFunction(event)" class="btton btton1" name="Add">Add</button>
+      
+      
+   
+
+    <script>
+      function myFunction() {
+  var y = document.getElementById("i1").value;
+  var z = document.getElementById("i2").value;
+  var a = document.getElementById("i3").value;
+  var b = document.getElementById("i4").value;
+  var c = document.getElementById("i5").value;
+  var x =+y + +z + +a + +b + +c;
+  document.getElementById("totalitems").innerHTML = x;
+}
+
+    </script>
+
+
+
+    <script type="text/javascript">
+      $('.minus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value > 1) {
+    			value = value - 1;
+    		} else {
+    			value = 0;
+    		}
+
+        $input.val(value);
+
+    	});
+
+    	$('.plus-btn').on('click', function(e) {
+    		e.preventDefault();
+    		var $this = $(this);
+    		var $input = $this.closest('div').find('input');
+    		var value = parseInt($input.val());
+
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		$input.val(value);
+    	});
+
+      $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+      });
+
+
+    </script>
+
+    
+  </body>
+</html>

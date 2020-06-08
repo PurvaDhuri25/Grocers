@@ -1,0 +1,201 @@
+
+    * {box-sizing: border-box;}
+    body {font-family: "Times New Roman", Times, serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+    html {
+      background-color: red;
+      font-family: 'Monoton', cursive;
+      color: white;
+    }
+    
+    h1 {
+      text-align: center;
+      font-family: 'Oswald', Helvetica, sans-serif;
+      font-size: 80px;
+      letter-spacing: 4px;
+      word-spacing: -8px;
+      color: white;
+      
+      
+    }
+    h2 {
+        font-family: 'Oswald', Helvetica, sans-serif;
+        font-size: 30px;
+        letter-spacing: 4px;
+        word-spacing: -8px;
+        color: white;
+      }
+
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        word-spacing: -8px;
+        color:blue;
+        margin-right: 5px;
+        
+        
+      }
+      #containerIntro h2,
+#containerIntro a{
+  display: inline;
+  vertical-align: top;
+  line-height: 28px;
+}
+.header img {
+  float: left;
+
+  
+}
+
+.header h1 {
+  float: left;
+  top: 18px;
+
+}
+    /**************************Product grid*******************************/
+      /* Grid container */
+      #p-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        /* Width of columns */
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      /* Product items */
+      div.p-grid-in {
+        box-sizing: border-box;
+        margin: 5px; 
+        padding: 10px;
+        border: 1px solid #e8f0ff;
+        background: #f2f7ff;
+      }
+      img.p-img {
+        object-fit: cover;
+        width: 100%;
+        height: 33vh;
+      }
+      img.b-img {
+        object-fit: cover;
+        width: 100%;
+        height: 22vh;
+        border: black;
+        border-color: black;
+    
+      }
+      
+      div.p-name {
+        font-weight: bold;
+        color: green;
+        font-size: 1.1em;
+      }
+      div.p-price {
+        color: #f44242;
+      }
+      div.p-desc {
+        color: #888;
+        font-size: 0.9em;
+      }
+      button.p-add {
+        background: #f46b41;
+        color: #fff;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 5px 5px 5px;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      /* Responsive */
+      @media only screen and (max-width: 1024px) {
+        #p-grid { grid-template-columns: 33% 33% 33%; }
+      }
+      @media only screen and (max-width: 600px) {
+        #p-grid { grid-template-columns: 50% 50%; }
+      }
+
+      /*************************Search bar****************************/
+     
+      * {
+        box-sizing: border-box;
+      }
+      
+      form.example input[type=text] {
+        margin-left: 150px;
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid grey;
+        float: left;
+        width: 60%;
+        background: #f1f1f1;
+    
+      }
+      
+      form.example button {
+        margin: 0 auto;
+        float: left;
+        width: 20%;
+        padding: 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;
+      }
+      
+      form.example button:hover {
+        background: #0b7dda;
+      }
+      
+      form.example::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
