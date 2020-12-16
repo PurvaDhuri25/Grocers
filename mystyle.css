@@ -48,7 +48,7 @@
       .text {font-size: 11px}
     }
     html {
-      background-color: red;
+      background-image: url("background.jpg");
       font-family: 'Monoton', cursive;
       color: white;
     }
@@ -87,15 +87,15 @@
   vertical-align: top;
   line-height: 28px;
 }
-.header img {
-  float: left;
 
-  
-}
 
 .header h1 {
-  float: left;
+  margin:1rem auto;
   top: 18px;
+
+}
+.header img{
+float: left;
 
 }
     /**************************Product grid*******************************/
@@ -109,10 +109,10 @@
       }
       /* Product items */
       div.p-grid-in {
-        box-sizing: border-box;
+        /*box-sizing: border-box;*/
         margin: 5px; 
         padding: 10px;
-        border: 1px solid #e8f0ff;
+       /* border: 1px solid #e8f0ff;*/
         background: #f2f7ff;
       }
       img.p-img {
@@ -199,3 +199,5 @@
         clear: both;
         display: table;
       }
+
+     
